@@ -32,6 +32,11 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 # Create new assistant or load existing
 assistant_id = "asst_WiAcF2rfjQyix3xUtdcwhZRq"
 
+@app.route("/")
+def index():
+    return {
+        "message": "Welcome to Shree Ram AI"
+    }
 
 # Start conversation thread
 @app.route("/start", methods=["GET"])
